@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Coarse grained results" >> result.txt
+
+for numThreads in 1 2 4 8 16 32
+do
+	for keyspace in 1000 10000 100000 1000000
+	do 
+		for distribution in A B C
+		do
+			echo $numThreads $keyspace $distribution>> result.txt
+		 	java Driver "coarse" $numThreads $keyspace $distribution>> result.txt
+		done
+	done
+done
+
+echo "Fine grained results" >> result.txt
+
+for numThreads in 1 2 4 8 16 32
+do
+	for keyspace in 1000 10000 100000 1000000
+	do 
+		for distribution in A B C
+		do
+			echo $numThreads $keyspace $distribution>> result.txt
+		 	java Driver "fine" $numThreads $keyspace $distribution>> result.txt
+		done
+	done
+done
+
+

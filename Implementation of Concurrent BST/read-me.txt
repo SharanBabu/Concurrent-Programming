@@ -1,0 +1,14 @@
+To compile and run the java source files in csgrads1 machine or any machine with a Linux distribution -
+
+Unzip the compressed folder named sxp141731-vxr143630-project3.zip
+
+- cd <path of the folder that is unzipped>
+- execute the following commands
+- bash compile.sh
+- bash run.sh <parameter 1> <parameter 2> <parameter 3> <parameter 4>
+ parameter 1 - name of the lock (coarse/fine)
+ parameter 2 - number of threads (1,2,4,8,16,32) 
+ parameter 3 - key space(1000, 10000, 100000, 1000000)
+ parameter 4 - distribution(A, B, C)
+e.g.,
+ bash run.sh coarse 4 10000 B
